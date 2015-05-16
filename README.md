@@ -8,6 +8,5 @@ Summary
 
 | Software  | Version  | 
 | --------- |:--------:|
-| WordPress | 4.0      |
-| Composer  | NA       |
-| PHP       | \>= 5.3.*|
+| WordPress | >= 4.0   |
+| PHP       | >= 5.4   |
