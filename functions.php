@@ -10,20 +10,20 @@
 
 function post($id)
 {
-	return (new Harmony\Voodoo\Factory\PostFactory)->make($id);	
+	return app('voodoo.factory.post')->make($id);	
 }
 
 function term($id)
 {
-	return (new Harmony\Voodoo\Factory\TermFactory)->make($id);		
+	return app('voodoo.factory.term')->make($id);		
 }
 
 function user($id)
 {
-	return (new Harmony\Voodoo\Factory\UserFactory)->make($id);		
+	return app('voodoo.factory.user')->make($id);		
 }
 
 function setting($id = null)
 {
-	return (new Harmony\Voodoo\Factory\SettingFactory)->make($id);
+	return app('voodoo.factory.setting')->make($id);
 }

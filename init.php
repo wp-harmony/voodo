@@ -13,6 +13,11 @@
  * @version 2.0.0
  */
 
+use Harmony\Voodoo\Factory\PostFactory;
+use Harmony\Voodoo\Factory\TermFactory;
+use Harmony\Voodoo\Factory\UserFactory;
+use Harmony\Voodoo\Factory\SettingFactory;
+
 /**
  * Register Voodoo
  * 
@@ -33,13 +38,15 @@ add_action('harmony_register', 'voodoo_register');
  * @param $app
  */
 function voodoo_boot($app)
-{/*
-	$app['voodoo.factory'] = $factory = new TemplateFactory(
-		new Invokable('get_divinity_locations'), 
-		new Invokable('get_divinity_engines')
-	);
+{
+	$app['voodoo.factory'] = $factory = [
+		'post' => new PostFactory,
+		'term' => new TermFactory,
+		'user' => new UserFactory,
+		'setting' => new SettingFactory,
+	];
 
 	do_action('voodoo_loaded', $factory);
-*/}
+}
 
 add_action('harmony_boot', 'voodoo_boot');
