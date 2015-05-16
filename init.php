@@ -1,6 +1,5 @@
 <?php
 /**
-
  * Voodoo - Active Record Models
  *
  * Part of the Harmony Group 
@@ -14,6 +13,11 @@
  * @version 2.0.0
  */
 
+/**
+ * Register Voodoo
+ * 
+ * @param Harmony\Mana\Container $app
+ */
 function voodoo_register($app)
 {
 	$app['autoloader']['Harmony\\Voodoo'] = __DIR__ . '/src';
@@ -21,3 +25,21 @@ function voodoo_register($app)
 }
 
 add_action('harmony_register', 'voodoo_register');
+
+
+/**
+ * Boot Voodoo
+ * 
+ * @param $app
+ */
+function voodoo_boot($app)
+{/*
+	$app['voodoo.factory'] = $factory = new TemplateFactory(
+		new Invokable('get_divinity_locations'), 
+		new Invokable('get_divinity_engines')
+	);
+
+	do_action('voodoo_loaded', $factory);
+*/}
+
+add_action('harmony_boot', 'voodoo_boot');
