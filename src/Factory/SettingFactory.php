@@ -24,7 +24,7 @@ class SettingFactory implements ModelFactory
 			$setting = '';
 		}
 		
-		return new Setting($data, $id);
+		return new Setting($data, $setting);
 	}
 
 	public function make_many($many)
